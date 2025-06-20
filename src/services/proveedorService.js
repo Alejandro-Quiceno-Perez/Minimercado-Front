@@ -10,6 +10,11 @@ const getProveedor = () => {
        return prueba;
 } 
 
+const createProveedor = (proveedorData) => axiosInstance.post('/proveedores', proveedorData);
+const updateProveedor = (id, proveedorData) => axiosInstance.put(`/proveedores/${id}`, proveedorData);
+
 export {
-       getProveedor
+       getProveedor,
+       createProveedor,
+       updateProveedor
 }

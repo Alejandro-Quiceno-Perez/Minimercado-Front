@@ -6,10 +6,12 @@ const getUser = () => {
                      "Content-Type": "application/json",
               },
        });
-       console.log(prueba)
+       console.log(prueba);
        return prueba;
-} 
+};
 
-export {
-       getUser
-}
+const createUser = (userData) => axiosInstance.post("/users", userData);
+
+const updateUser = (id, userData) => axiosInstance.put(`/users/${id}`, userData);
+
+export { getUser, createUser, updateUser };
